@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CHAT APP </title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <!-- LOGIN -->
+    <div class="user-interface jumbotron">
+      <div class="text-center form-group">
+        <h1 class="display-4 text-primary mt-3">Welcome to Chat App</h1>
+        <small class="lead text-info">this is a simple chat that provide you a real web connection with your
+          friends</small>
+      </div>
+
+      <form id="home">
+        <div class="form-group">
+          <label for="txtUserName">User Name</label>
+          <input autofocus autocomplete="username" required type="text" class="form-control form-control-lg"
+            name="txtUserName" id="txtUserName" placeholder="Enter Your User Name">
+        </div>
+        <button type="submit" class="btn btn-outline-info btn btn-block btn-lg" id="btnEnter"> Enter </button>
+      </form>
+    </div>
+    <!-- CHAT APP -->
+    <div class="interface row">
+      <div class="col-md-4">
+        <div>
+          <h3 class="text-success "> Online Users</h3>
+          <div id="alert" class="alert alert-success">
+            You are Succesfully Logged in
+          </div>
+          <div id="alert2" style="display:none" class="alert alert-danger">
+            Someone Left Your Chat
+          </div>
+          <div id="alert3" style="display:none" class="alert alert-success">
+            <strong id="user-name-joined"></strong> Join Your Chat
+          </div>
+          <ul class="list-group" id="user-names">
+            <!-- USERS -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <ul class="chat list-group" id="chat">
+          <!-- MEssages -->
+        </ul>
+        <form id="messageForm" class="mt-5">
+          <div class="form-group">
+            <label for="">Enter Message</label>
+            <textarea autofocus autocomplete="work" required class="form-control" id="message"></textarea>
+          </div>
+          <button type="sybmit" id="submit" class="btn btn-info">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./jquery.min.js"></script>
+  <script src="./socket.io.js"></script>
+  <script src="./bootstrap.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
